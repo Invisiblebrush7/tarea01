@@ -193,5 +193,7 @@ void getSnackBar(String msg, context) {
       style: TextStyle(fontSize: 18.0),
     ),
   );
-  ScaffoldMessenger.of(context).showSnackBar(snackBar);
+  ScaffoldMessenger.of(context)
+    ..hideCurrentSnackBar()
+    ..showSnackBar(snackBar);
 }
